@@ -1,26 +1,29 @@
 
-def metade(n, forma):
+def metade(n, forma= False):
+    '''
+    :param n:
+    :param forma:
+    :return:
+    '''
     num= n / 2
-    if forma:
-        num= f'{num:.2f}'.replace(".", ",")
-    return num
-def dobro(n, forma):
+    return num if not forma else moeda(num)
+def dobro(n, forma= False):
     Num= n * 2
     if forma:
         Num= f'{Num:.2f}'.replace(".", ",")
     return Num
-def aumentar(n, taxa, forma):
+def aumentar(n, taxa, forma=False):
     num= n + (n * taxa / 100)
     if forma:
         num= f'{num:.2f}'.replace(".", ",")
     return num
-def diminuir(n, taxa, forma):
+def diminuir(n, taxa, forma=False):
     num= n - (n * taxa / 100)
     if forma:
         num= f'{num:.2f}'.replace(".", ",")
     return num
-def moeda(n):
-    num= f'{n:.2f}'.replace(".",",")
+def moeda(n, sifra='R$'):
+    num= f'{sifra}{n:.2f}'.replace(".",",")
     return num
 def resumo(n, aumen, dimi):
     print('-' * 28)

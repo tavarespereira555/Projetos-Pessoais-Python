@@ -5,6 +5,5 @@ def leia_dinheiro(letras):
             letras1 = float(entrada)
             return letras1
         except ValueError:
-            print(f'ERRO: "{entrada}" e um preco invalido')
-
+            print(f'\033[31mERRO: "{entrada}" e um preco invalido!!!!\03[m')
 

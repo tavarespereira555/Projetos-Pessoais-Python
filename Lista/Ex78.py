@@ -12,3 +12,5 @@ for i in range(5):
         lista3.append(i)
 print(f'O maior valor digitado foi {max(lista)} nas posicoes {'... '.join([str (num) for num in lista2])}...')
 print(f'O menor valor digitado foi {min(lista)} nas posicoes {'... '.join([str (num) for num in lista3])}...')
+#for i, v in enumerate(nome_lista):
+#percorre a lista quando vc precisa saber do indice e do numero ao mesmo tempo

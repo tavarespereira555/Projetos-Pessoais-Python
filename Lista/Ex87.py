@@ -1,0 +1,20 @@
+lista= []
+SomPar= 0
+Som3Colu= 0
+Ma2Lin= 0
+for l in range(3):
+    for c in range(3):
+        num= int(input(f'Digite um valor para a posicao {[l,c]}:'))
+        lista.append(num)
+print('=-' * 35)
+for i,v in enumerate(lista):
+    print(f'[\t{v}\t]',  end='')
+    if i % 3 == 2:
+        Som3Colu += v
+        print()
+    if v % 2 == 0:
+        SomPar += v
+
+print('=-' * 35)
+print(f'Soma dos valores pares: {SomPar}')
+print(f'Soma dos valores da 3 coluna: {Som3Colu}')

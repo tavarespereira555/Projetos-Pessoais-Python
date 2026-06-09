@@ -7,6 +7,7 @@ for i in range(1, 7 + 1):
         lista_par.append(num)
     else:
         lista_impar.append(num)
+print('=-' * 35)
 lista.append(lista_par[:])
 lista.append(lista_impar[:])
 lista_par.sort(reverse= False)

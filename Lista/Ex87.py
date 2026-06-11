@@ -14,7 +14,15 @@ for i,v in enumerate(lista):
         print()
     if v % 2 == 0:
         SomPar += v
-
+    if 3 <= i <= 5:
+        if v > Ma2Lin:
+            Ma2Lin = v
+        #if i == 3:
+            #Ma2Lin = v
+        #else:
+            #if v > Ma2Lin:
+                #Ma2Lin = v
 print('=-' * 35)
 print(f'Soma dos valores pares: {SomPar}')
 print(f'Soma dos valores da 3 coluna: {Som3Colu}')
+print(f'O maior valor da segunda linha e {Ma2Lin}')

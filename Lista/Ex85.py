@@ -1,17 +1,13 @@
-lista= []
-lista_par= []
-lista_impar= []
+lista= [[], []]
 for i in range(1, 7 + 1):
     num= int(input(f'Digite o {i}o. valor: '))
     if num % 2 == 0:
-        lista_par.append(num)
+        lista[0].append(num)
     else:
-        lista_impar.append(num)
+        lista[1].append(num)
+lista[0].sort()
+lista[1].sort()
 print('=-' * 35)
-lista.append(lista_par[:])
-lista.append(lista_impar[:])
-lista_par.sort(reverse= False)
-lista_impar.sort()
 print(f'Lista completa: {lista}')
-print(f'Lista Par: {lista_par}')
-print(f'Lista Impar: {lista_impar}')
+print(f'Numeros Pares: {lista[0]}')
+print(f'Numeros Impares: {lista[1]}')

@@ -16,10 +16,10 @@ while True:
     if conti == 'N':
         break
 print('=-' * 40)
-print('No.\t \tNOME\t \t MEDIA')
+print(f'{"No.":<4}{"NOME":<10}{"MEDIA":>8}')
 print('----------------------------')
 for i,v in enumerate(ListaAlun):
-    print(f'{i}\t  {v[0]}\t \t \t{v[-1]}')
+    print(f'{i:<4}{v[0]:<10}{v[-1]:>8.2f}')
 print('-----------------------------------------------------')
 while True:
     num= int(input('Mostrar notas de qual aluno?? (999 para parar): '))
@@ -30,3 +30,4 @@ while True:
             print(f'Notas de {v[0]} sao {v[1], v[2]}')
 print('FINALIZANDO...')
 print('<<< VOLTE SEMPRE >>>')
+#lista.append([nome, [n1, n2], m])

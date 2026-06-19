@@ -11,4 +11,12 @@ for i,v in enumerate(lista):
     print(f'[\t{v}\t]',  end='')
     if i % 3 == 2:
         print()
+'''
+centralizar= :^numero de espacos
+Quando acabar a linha ou seja o laco do for da linha colocar um print()
+for l in range(3):
+    for c in range(3):
+        print(lista[l][c])
+    print()
+'''
 

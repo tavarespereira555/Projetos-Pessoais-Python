@@ -8,8 +8,14 @@ if not comeca:
 for k, v in Jogadores.items():
     print(f'\tO {k} tirou {v}')
 print('Ranking dos jogadores: ')
-for k,v in Jogadores.items():
+lista= list(Jogadores.items())
+for k,v in lista:
     if k == 1:
-        #v= #colocar o valor nessa posicao
-
+        lista.insert(v, k)
+    elif v < lista[1]:
+        lista.insert(v, k)
+print(lista)
+#tentando entender:
+# lista[i][0] → nome do jogador
+#lista[i][1] → valor sorteado
 

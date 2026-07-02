@@ -4,7 +4,7 @@ analise['nome']= str(input('Nome do jogador: '))
 partidas= int(input(f'Quantas partidas {analise['nome']} jogou? '))
 for i in range(partidas):
     lista.append(int(input(f'Quantos gols na partida {i + 1}?? ')))
-    analise['gols']= lista
+    analise['gols']=  lista
 analise['total'] = sum(lista)
 print('=-' * 35)
 print(analise)

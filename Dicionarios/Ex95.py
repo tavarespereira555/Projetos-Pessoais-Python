@@ -18,5 +18,21 @@ while True:
 print('=-' * 35)
 print(f'{"Cod":<4}{"Nome":<10}{"Gols".center(20)}{"Total":>4}')
 print('-' * 40)
-for posi,(k, v) in enumerate(lista, start=0):
-    print(f'{posi} {lista[0]['nome']}')
+for k, v in enumerate(lista):
+    print(f'{k:<4}{v['nome']:<10}{str(v['gols']):>8}{v['total']:>4}')
+print('-' * 40)
+while True:
+    joga= int(input('Mostrar dados de qual jogador??? (999 para): '))
+    if joga == 999:
+        break
+    achou= False
+    for k, v in enumerate(lista):
+        if joga == k:
+            achou= True
+            print(f'-- LEVANTAMENTO DO JOGADOR {v['nome']}:')
+            for i, gol in enumerate(v['gols']):
+                print(f'No jogo {i + 1} fez {gol} gols')
+    if not achou:
+        print(f'ERRO!! Não existe jogador com o codigo {joga}! Tente novamente')
+print('<< VOLTE SEMPRE>>')
+

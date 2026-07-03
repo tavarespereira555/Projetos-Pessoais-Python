@@ -1,3 +1,4 @@
+import time
 import random
 Jogadores = dict()
 come = str(input())
@@ -8,6 +9,7 @@ if not come:
         Jogadores[f'jogador{i}'] = random.randint(1, 6)
     for k, v in Jogadores.items():
         print(f'\tO {k} tirou {v}')
+        time.sleep(1)
     print('Ranking dos jogadores: ')
     lista= list(Jogadores.items())
     while troca:
@@ -20,4 +22,5 @@ if not come:
                 troca = True
     for posi,(P, item) in enumerate(lista, start =1):
         print(f'{posi}°lugar: {P} com {item}')
-
+        time.sleep(1)
+#existe um comando no python para ordenar as lista, n precisaria fazer na mao!!!

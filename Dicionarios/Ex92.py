@@ -1,8 +1,9 @@
 dados= dict()
+from datetime import datetime
 for i in range(1):
     dados['nome']= str(input('Nome: '))
     ano= int(input('Ano de nascimento: '))
-    dados['idade'] = 2026 - ano
+    dados['idade'] = datetime.now().year - ano
     dados['ctps'] = int(input('Carteira de trabalho (0 nao tem): '))
     if dados ['ctps'] != 0:
         dados['contratacao'] = int(input('Ano de contratacao: '))
@@ -14,4 +15,6 @@ for i in range(1):
         print('=-' * 40)
         print(dados)
 for k, v in dados.items():
-    print(f'{k} tem valor de {v}')
+    print(f'  - {k} tem valor de {v}')
+#contratacao > 2000
+#ano nascimento 1980

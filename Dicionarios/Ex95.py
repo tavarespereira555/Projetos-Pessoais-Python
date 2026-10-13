@@ -12,7 +12,11 @@ while True:
     ListaGols.clear()
     lista.append(analise.copy())
     analise.clear()
-    conti= str(input('Deseja continuar??? [S/N]: '))
+    while True:
+        conti= str(input('Deseja continuar??? [S/N]: ')).upper()
+        if conti in 'SN':
+            break
+        print('ERRO!! Responda S ou N')
     if conti in 'Nn':
         break
 print('=-' * 35)
@@ -22,6 +26,7 @@ for k, v in enumerate(lista):
     print(f'{k:<4}{v['nome']:<10}{str(v['gols']):>8}{v['total']:>4}')
 print('-' * 40)
 while True:
+
     joga= int(input('Mostrar dados de qual jogador??? (999 para): '))
     if joga == 999:
         break
@@ -32,6 +37,7 @@ while True:
             print(f'-- LEVANTAMENTO DO JOGADOR {v['nome']}:')
             for i, gol in enumerate(v['gols']):
                 print(f'No jogo {i + 1} fez {gol} gols')
+    print('-' * 30)
     if not achou:
         print(f'ERRO!! Não existe jogador com o codigo {joga}! Tente novamente')
 print('<< VOLTE SEMPRE>>')

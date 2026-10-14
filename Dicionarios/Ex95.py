@@ -3,15 +3,15 @@ ListaGols= []
 lista= []
 while True:
     print('----------------------------------------------')
+    analise.clear()
+    ListaGols.clear()
     analise['nome']= str(input('Nome do jogador: '))
     partidas= int(input(f'Quantas partidas {analise['nome']} jogou? '))
     for i in range(partidas):
         ListaGols.append(int(input(f'Quantos gols na partida {i + 1}?? ')))
     analise['gols']=  ListaGols[:]
     analise['total'] = sum(ListaGols)
-    ListaGols.clear()
     lista.append(analise.copy())
-    analise.clear()
     while True:
         conti= str(input('Deseja continuar??? [S/N]: ')).upper()
         if conti in 'SN':
@@ -20,10 +20,14 @@ while True:
     if conti in 'Nn':
         break
 print('=-' * 35)
-print(f'{"Cod":<4}{"Nome":<10}{"Gols".center(20)}{"Total":>4}')
+print('cod ', end= '')
+for k in analise.keys():
+    print(f'{k:<15}', end='')
+#print(f'{"Cod":<4}{"Nome":<15}{"Gols":^16}{"Total":>4}')
+print()
 print('-' * 40)
 for k, v in enumerate(lista):
-    print(f'{k:<4}{v['nome']:<10}{str(v['gols']):>8}{v['total']:>4}')
+    print(f'{k:<4}{v['nome']:<15}{str(v['gols']):<15}{v['total']:<15}')
 print('-' * 40)
 while True:
 

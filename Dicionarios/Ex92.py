@@ -18,3 +18,4 @@ for k, v in dados.items():
     print(f'  - {k} tem valor de {v}')
 #contratacao > 2000
 #ano nascimento 1980
+#parei aqui na correcao dos exercicio, lembrar de voltar aqui mais para frente

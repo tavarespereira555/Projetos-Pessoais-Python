@@ -1,7 +1,8 @@
 def escreva(param):
-    print('~' * len(param))
-    print(param)
-    print('~' * len(param))
+    tam= len(param) + 4
+    print('~' * tam)
+    print(f'  {param}')
+    print('~' * tam)
 
 escreva('Ola, mundo')
 escreva('Hello Word')

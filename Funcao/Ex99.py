@@ -1,14 +1,20 @@
 import time
 def maior(* num):
-    Mair = -9999
+    cont = Mair = 0
     print('=-' * 30)
     print('Analisando os valores passados...')
-    print(f'{num} foram informados {len(num)} valores ao todo')
     for i in num:
-        if i > Mair:
+        print(f'{i}', end=' ')
+        time.sleep(0.5)
+        if cont == 0:
             Mair= i
+        else:
+            if i > Mair:
+                Mair= i
+        cont += 1
+    print(f'foram informados {len(num)} valores ao todo')
     print(f'O maior valor informado foi: {Mair}')
-    time.sleep(0.5)
+
 
 maior(2,9,4,5,7,1)
 maior(4,7,0)

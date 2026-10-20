@@ -1,0 +1,2 @@
+def ajuda(msg):
+    mensagem=

@@ -1,12 +1,16 @@
 def leiaInt(msg):
+    ok= False
+    valor= 0
     while True:
-        n1= (input(msg))
+        n1= str(input(msg))
         if n1.isnumeric():
-            n1= int(n1)
-            return n1
+            valor= int(n1)
+            ok= True
         else:
-            print('\033[31mERRO! Digite apenas um numero inteiro valido.\033[m')
-
+            print('\033[31mERRO!!! Digite apenas numero inteiro validos\033[m')
+        if ok:
+            break
+    return valor
 
 n= leiaInt('Digite um numero: ')
 print(f'Vc acabou de digitar o numero {n}')

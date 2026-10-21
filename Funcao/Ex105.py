@@ -31,17 +31,18 @@ def notas(* num, sit=False):
         pos2 += 1
     m= soma / len(num)
     if sit:
-        if m > 7:
-            diciona['sit']= 'Boa'
-        elif m < 4:
-            diciona['sit']= 'Ruim'
+        if m >= 7:
+            diciona['situacao']= 'Boa'
+        elif m >= 5:
+            diciona['situacao']= 'Razoável'
         else:
-            diciona['sit']= 'Razoável'
+            diciona['situacao']= 'Ruim'
     diciona['Quanti'] = len(num)
     diciona['Maior'] = mai
     diciona['Menor']= meno
-    diciona['Media']= m
+    diciona['Media']= soma / len(num)
+    #diciona['Media'] = sum(num) / len(num)
     return diciona
 
 
-print(notas(10,5,5,10,8))
+print(notas(10,5.4,5,10,8, sit= True))

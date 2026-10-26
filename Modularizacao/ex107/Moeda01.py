@@ -12,11 +12,11 @@ def dobro(n, forma):
 def aumentar(n, taxa, forma):
     num= n + (n * taxa / 100)
     if forma:
-        num= f'{num:.2f}'.replace(".", ",")
+        num= f'{num:5.2f}'.replace(".", ",")
     return num
 def diminuir(n, taxa, forma):
     num= n - (n * taxa / 100)
     if forma:
-        num= f'{num:.2f}'.replace(".", ",")
+        num= f'{num:5.2f}'.replace(".", ",")
     return num
 

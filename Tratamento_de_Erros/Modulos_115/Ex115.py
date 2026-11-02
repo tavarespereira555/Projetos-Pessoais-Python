@@ -1,16 +1,19 @@
-from Tratamento_de_Erros.Modulos_115.Def_115 import titulo, nomes
+from Tratamento_de_Erros.Modulos_115.Arquivo_115 import *
+from Tratamento_de_Erros.Modulos_115.Interface_115 import *
+
+arq= 'cursoemvideo.txt'
+if not ArquivoExiste(arq):
+    criarArquivo(arq)
 while True:
     titulo('Menu Principal')
-    print('1 - \033[34mVer pessoas cadastradas\033[m')
-    print('2 - \033[34mCadastar pessoas novas\033[m')
-    print('3 - \033[34mSair do sistema\033[m')
-    resp= int(input('Sua Opcao: '))
-    match resp:
+    resposta= menu(['Ver pessoas cadastradas', 'Cadastrar novas pessoas', 'Sair do sistema'])
+    match resposta:
         case 1:
-            titulo('Pessoas Cadastradas')
+            titulo('Opcao 1')
             for i in range(0,len(nomes),2):
                 print(f'{nomes[i]:<30}  {nomes[i + 1]} anos')
         case 2 :
+            titulo('Opcao 2')
             titulo('Novo Cadastro')
             n1= str(input('Nome: '))
             nomes.append(n1)
@@ -26,6 +29,7 @@ while True:
 
             print(f'Novo registro de {n1} adicionado')
         case 3:
+            titulo('Opcao 3')
             titulo('Saindo do sistema... Volte Sempre!!')
             break
         case _:

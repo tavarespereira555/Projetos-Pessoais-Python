@@ -9,6 +9,6 @@ def aumentar10(n):
 def dimi13(n):
     dimi= n - (n * 13 / 100)
     return dimi
-def moeda(n):
-    n= f'R${n:5.2f}'
+def moeda(n, sifra= 'R$'):
+    n= f'{sifra}{n:5.2f}'
     return n

@@ -1,4 +1,4 @@
-def metade(n, forma= False):
+"""def metade(n, forma= False):
     met= n / 2
     if forma:
         met= f'R${float(met):5.2f}'
@@ -30,4 +30,4 @@ def resumo(n, taxa_aumen, taxa_dimi):
     print(f'Metade do preco: {'':8}{metade(n, True)}')
     print(f'{taxa_aumen}% de aumento: {'':9}{aumentar10(n, taxa_aumen,True)}')
     print(f'{taxa_dimi}% de redução: {'':9}{dimi13(n,taxa_dimi,True)}')
-    print('-' * 30)
+    print('-' * 30)"""

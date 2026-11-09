@@ -1,6 +1,9 @@
 from rich import print
 class Funcionario:
+    #Atributos de classe
+    empresa= 'Curso em video'
     def __init__(self, nome, setor, cargo):
+        #Atributos de instancia
         self.nome= nome
         self.setor= setor
         self.cargo= cargo
@@ -9,7 +12,7 @@ class Funcionario:
         pass
     def apresentar(self):
         return (f':handshake:Ola, sou [blue]{self.nome}[/] e sou {self.cargo} do setor de {self.setor} da'
-                f' Empresa Curso em video')
+                f' Empresa {Funcionario.empresa}#ou self.__class__.empresa')
 
 
 f1= Funcionario('Pedro', 'TI', 'Programador')

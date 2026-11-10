@@ -1,6 +1,5 @@
-from rich import inspect, print
-
-class Pessoa:
+from abc import ABC, abstractmethod
+class Pessoa(ABC):
     def __init__(self, nome, idade):
         self.nome= nome
         self.idade= idade
@@ -8,6 +7,9 @@ class Pessoa:
     def fazer_aniversario(self):
         self.idade += 1
 
+    @abstractmethod
+    def estudar(self):
+        pass
 
 
 class Aluno(Pessoa):
@@ -18,7 +20,8 @@ class Aluno(Pessoa):
     def fazer_matricula(self):
         print(f'{self.nome} acabou de fazer matricula')
 
-
+    def estudar(self):
+        print(f'{self.nome} esta estudando {self.curso} na turma {self.turma}')
 
 class Professor(Pessoa):
     def __init__(self, nome, idade, especialidade, nivel):
@@ -28,6 +31,8 @@ class Professor(Pessoa):
     def dar_aula(self):
         print(f'O Prof.{self.nome} acabou de dar aula')
 
+    def estudar(self):
+        print(f'{self.nome} e especialista em {self.especialidade} no {self.nivel}')
 
 class Funcionario(Pessoa):
     def __init__(self, nome, idade, cargo, setor):
@@ -38,6 +43,5 @@ class Funcionario(Pessoa):
     def bater_ponto(self):
         print(f'{self.nome} acabou de bater ponto')
 
-a1= Aluno('Joao', 18, 'Informatica', 'B')
-inspect(a1)
-p1= Professor('Samuel', 32, 'Quimica', 'Mestrado')
+    def estudar(self):
+        print(f'{self.nome} esta se especializando na area {self.setor}')

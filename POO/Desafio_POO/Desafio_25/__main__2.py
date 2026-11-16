@@ -1,4 +1,3 @@
-import dis
 
 from Classes_25.Classes_desafio25 import *
 from rich.table import Table
